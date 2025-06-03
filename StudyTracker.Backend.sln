@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyTracker.Host", "StudyTracker.Host\StudyTracker.Host.csproj", "{D05F098B-46FB-41E4-B04A-74FFD36A47C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DE5BE1F4-4ADB-4300-BE34-08C95E4B5A5C}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{A38D580A-208C-4195-84DA-880C44E8E75F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyTracker.Infrastructure.Migrator", "StudyTracker.Infrastructure.Migrator\StudyTracker.Infrastructure.Migrator.csproj", "{DD07BC0B-42E9-44FB-8040-B1B3BCF1D49E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyTracker.Infrastructure.Postgres", "StudyTracker.Infrastructure.Postgres\StudyTracker.Infrastructure.Postgres.csproj", "{9D31570C-174F-431B-B5D0-0F60EB98BB6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyTracker.Presentation", "StudyTracker.Presentation\StudyTracker.Presentation.csproj", "{6AA2D9BE-B7EB-4E16-93C0-862EE4DF27A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyTracker.Application", "StudyTracker.Application\StudyTracker.Application.csproj", "{CD254C91-1C53-4EF1-BCBC-DD6C7AE5F869}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyTracker.Domain", "StudyTracker.Domain\StudyTracker.Domain.csproj", "{FDE466D3-25E9-4B72-8C9D-809679D23AB1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D05F098B-46FB-41E4-B04A-74FFD36A47C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D05F098B-46FB-41E4-B04A-74FFD36A47C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D05F098B-46FB-41E4-B04A-74FFD36A47C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D05F098B-46FB-41E4-B04A-74FFD36A47C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD07BC0B-42E9-44FB-8040-B1B3BCF1D49E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD07BC0B-42E9-44FB-8040-B1B3BCF1D49E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD07BC0B-42E9-44FB-8040-B1B3BCF1D49E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD07BC0B-42E9-44FB-8040-B1B3BCF1D49E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D31570C-174F-431B-B5D0-0F60EB98BB6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D31570C-174F-431B-B5D0-0F60EB98BB6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D31570C-174F-431B-B5D0-0F60EB98BB6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D31570C-174F-431B-B5D0-0F60EB98BB6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AA2D9BE-B7EB-4E16-93C0-862EE4DF27A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AA2D9BE-B7EB-4E16-93C0-862EE4DF27A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AA2D9BE-B7EB-4E16-93C0-862EE4DF27A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AA2D9BE-B7EB-4E16-93C0-862EE4DF27A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD254C91-1C53-4EF1-BCBC-DD6C7AE5F869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD254C91-1C53-4EF1-BCBC-DD6C7AE5F869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD254C91-1C53-4EF1-BCBC-DD6C7AE5F869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD254C91-1C53-4EF1-BCBC-DD6C7AE5F869}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDE466D3-25E9-4B72-8C9D-809679D23AB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDE466D3-25E9-4B72-8C9D-809679D23AB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDE466D3-25E9-4B72-8C9D-809679D23AB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDE466D3-25E9-4B72-8C9D-809679D23AB1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DD07BC0B-42E9-44FB-8040-B1B3BCF1D49E} = {A38D580A-208C-4195-84DA-880C44E8E75F}
+		{9D31570C-174F-431B-B5D0-0F60EB98BB6B} = {A38D580A-208C-4195-84DA-880C44E8E75F}
+	EndGlobalSection
+EndGlobal

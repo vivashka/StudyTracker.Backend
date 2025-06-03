@@ -1,0 +1,6 @@
+﻿services:
+  studytracker.backend:
+    image: studytracker.backend
+    build:
+      context: .
+      dockerfile: StudyTracker.Backend/Dockerfile
