@@ -21,4 +21,10 @@
         <Link>.dockerignore</Link>
       </Content>
     </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\StudyTracker.Infrastructure.Migrator\StudyTracker.Infrastructure.Migrator.csproj" />
+      <ProjectReference Include="..\StudyTracker.Infrastructure.Postgres\StudyTracker.Infrastructure.Postgres.csproj" />
+      <ProjectReference Include="..\StudyTracker.Presentation\StudyTracker.Presentation.csproj" />
+    </ItemGroup>
 </Project>

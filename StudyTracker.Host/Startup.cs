@@ -1,5 +1,8 @@
 using Microsoft.AspNetCore.Builder;
 using Serilog;
+using StudyTracker.Application.Extensions;
+using StudyTracker.Infrastructure.Postgres.Extensions;
+using StudyTracker.Presentation.Extensions;
 
 namespace StudyTracker.Backend;
 
@@ -12,6 +15,10 @@ public class Startup(IConfiguration configuration)
         service.AddCors();
         service.AddSerilog();
         service.AddRouting();
+        
+        service.ConfigurePostgresInfrastructure();
+        service.ConfigureApplicationExtensions(_configuration);
+        service.ConfigurePresentationLayer();
     }
     
     public void Configure(IApplicationBuilder applicationBuilder)

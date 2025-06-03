@@ -1,0 +1,16 @@
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Application\bin\Debug\net8.0\StudyTracker.Application.deps.json
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Application\bin\Debug\net8.0\StudyTracker.Application.dll
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Application\bin\Debug\net8.0\StudyTracker.Application.pdb
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Application\bin\Debug\net8.0\StudyTracker.Domain.dll
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Application\bin\Debug\net8.0\StudyTracker.Domain.pdb
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Application\obj\Debug\net8.0\StudyTracker.Application.csproj.AssemblyReference.cache
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Application\obj\Debug\net8.0\StudyTracker.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Application\obj\Debug\net8.0\StudyTracker.Application.AssemblyInfoInputs.cache
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Application\obj\Debug\net8.0\StudyTracker.Application.AssemblyInfo.cs
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Application\obj\Debug\net8.0\StudyTracker.Application.csproj.CoreCompileInputs.cache
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Application\obj\Debug\net8.0\StudyTracker.Application.sourcelink.json
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Application\obj\Debug\net8.0\StudyTra.12AC6E7E.Up2Date
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Application\obj\Debug\net8.0\StudyTracker.Application.dll
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Application\obj\Debug\net8.0\refint\StudyTracker.Application.dll
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Application\obj\Debug\net8.0\StudyTracker.Application.pdb
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Application\obj\Debug\net8.0\ref\StudyTracker.Application.dll

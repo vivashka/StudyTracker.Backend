@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "zdxow7uDt79Xv6bkeWwN27IJLINYnQ/E2eflFUWlR4UAXD9vcVeZ94sInVCPjcsgJr5PJyRV/3Z47yjQCB41sg==",
+  "dgSpecHash": "0hfiQ2X/F2kxD3NlN5e1KVhvsgN4HMXF2Srq+stWFXOVBh01i7imJXGz/alx4nOK6Vocuhxmvx3jqFVT4vLXbA==",
   "success": true,
   "projectFilePath": "C:\\Users\\vovac\\RiderProjects\\StudyTracker.Backend\\StudyTracker.Application\\StudyTracker.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\vovac\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\vovac\\.nuget\\packages\\microsoft.extensions.configuration.binder\\8.0.0\\microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",
+    "C:\\Users\\vovac\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.1\\microsoft.extensions.dependencyinjection.8.0.1.nupkg.sha512",
+    "C:\\Users\\vovac\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\vovac\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "C:\\Users\\vovac\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\8.0.0\\microsoft.extensions.options.configurationextensions.8.0.0.nupkg.sha512",
+    "C:\\Users\\vovac\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

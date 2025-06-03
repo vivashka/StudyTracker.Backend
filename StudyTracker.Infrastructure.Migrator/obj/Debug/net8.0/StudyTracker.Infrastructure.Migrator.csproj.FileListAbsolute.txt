@@ -1,0 +1,13 @@
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Infrastructure.Migrator\bin\Debug\net8.0\StudyTracker.Infrastructure.Migrator.deps.json
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Infrastructure.Migrator\bin\Debug\net8.0\StudyTracker.Infrastructure.Migrator.dll
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Infrastructure.Migrator\bin\Debug\net8.0\StudyTracker.Infrastructure.Migrator.pdb
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Infrastructure.Migrator\obj\Debug\net8.0\StudyTracker.Infrastructure.Migrator.csproj.AssemblyReference.cache
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Infrastructure.Migrator\obj\Debug\net8.0\StudyTracker.Infrastructure.Migrator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Infrastructure.Migrator\obj\Debug\net8.0\StudyTracker.Infrastructure.Migrator.AssemblyInfoInputs.cache
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Infrastructure.Migrator\obj\Debug\net8.0\StudyTracker.Infrastructure.Migrator.AssemblyInfo.cs
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Infrastructure.Migrator\obj\Debug\net8.0\StudyTracker.Infrastructure.Migrator.csproj.CoreCompileInputs.cache
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Infrastructure.Migrator\obj\Debug\net8.0\StudyTracker.Infrastructure.Migrator.sourcelink.json
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Infrastructure.Migrator\obj\Debug\net8.0\StudyTracker.Infrastructure.Migrator.dll
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Infrastructure.Migrator\obj\Debug\net8.0\refint\StudyTracker.Infrastructure.Migrator.dll
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Infrastructure.Migrator\obj\Debug\net8.0\StudyTracker.Infrastructure.Migrator.pdb
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Infrastructure.Migrator\obj\Debug\net8.0\ref\StudyTracker.Infrastructure.Migrator.dll

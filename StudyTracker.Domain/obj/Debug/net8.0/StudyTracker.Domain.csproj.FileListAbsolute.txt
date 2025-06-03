@@ -1,0 +1,12 @@
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Domain\bin\Debug\net8.0\StudyTracker.Domain.deps.json
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Domain\bin\Debug\net8.0\StudyTracker.Domain.dll
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Domain\bin\Debug\net8.0\StudyTracker.Domain.pdb
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Domain\obj\Debug\net8.0\StudyTracker.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Domain\obj\Debug\net8.0\StudyTracker.Domain.AssemblyInfoInputs.cache
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Domain\obj\Debug\net8.0\StudyTracker.Domain.AssemblyInfo.cs
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Domain\obj\Debug\net8.0\StudyTracker.Domain.csproj.CoreCompileInputs.cache
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Domain\obj\Debug\net8.0\StudyTracker.Domain.sourcelink.json
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Domain\obj\Debug\net8.0\StudyTracker.Domain.dll
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Domain\obj\Debug\net8.0\refint\StudyTracker.Domain.dll
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Domain\obj\Debug\net8.0\StudyTracker.Domain.pdb
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Domain\obj\Debug\net8.0\ref\StudyTracker.Domain.dll

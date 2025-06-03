@@ -1,5 +1,7 @@
+using System.Text;
 using Serilog;
 using Microsoft.AspNetCore.Hosting;
+using StudyTracker.Infrastructure.Migrator.Migrations.Database;
 
 namespace StudyTracker.Backend;
 

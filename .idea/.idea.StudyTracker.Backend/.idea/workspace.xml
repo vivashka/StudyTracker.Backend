@@ -7,20 +7,132 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fa6f9ba-85da-4694-b60d-b49901129531" name="Changes" comment="" />
+    <list default="true" id="4fa6f9ba-85da-4694-b60d-b49901129531" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Application/Contracts/External/IAssignmentProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Application/Contracts/External/ICoursesProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Application/Contracts/External/IStudentProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Application/Contracts/IAssignmentService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Application/Contracts/ICoursesService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Application/Contracts/IStudentService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Application/Extensions/ApplicationExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Application/Models/ActionErrorModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Application/Models/Admin.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Application/Models/ResponseModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Application/Services/AssignmentService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Application/Services/CoursesService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Application/Services/StudentService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/Extensions/MigrationExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/Migrations/2025060400_CreateSchema.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/Migrations/2025060401_CreateStudentsTable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/Migrations/2025060402_CreateCoursesTable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/Migrations/2025060403_CreateStudentsCoursesTable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/Migrations/2025060404_CreateAssignmentsTable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/Migrations/2025060405_CreateAssignmentsStatesTable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/Migrations/Database/MigrationManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/Contracts/IAssignmentsRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/Contracts/ICoursesRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/Contracts/IStudentRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/Extensions/PostgresExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/Repository/AssignmentsRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/Repository/BaseRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/Repository/CoursesRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/Repository/StudentRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/Services/AssignmentProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/Services/CoursesProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/Services/StudentProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Presentation/Controllers/CoursesController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Presentation/Controllers/UserController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Presentation/Extensions/PresentationLayerExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyTracker.Presentation/Models/AuthModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.StudyTracker.Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StudyTracker.Backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Application/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Application/StudyTracker.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Application/StudyTracker.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Application/obj/Debug/net8.0/StudyTracker.Application.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Application/obj/Debug/net8.0/StudyTracker.Application.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Application/obj/Debug/net8.0/StudyTracker.Application.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Application/obj/Debug/net8.0/StudyTracker.Application.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Application/obj/Debug/net8.0/StudyTracker.Application.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Application/obj/Debug/net8.0/StudyTracker.Application.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Application/obj/StudyTracker.Application.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Application/obj/StudyTracker.Application.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Application/obj/StudyTracker.Application.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Application/obj/StudyTracker.Application.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Application/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Application/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Application/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Application/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Application/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Application/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Application/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Application/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Domain/Models/Task.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Domain/Models/Assignments.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Domain/obj/Debug/net8.0/StudyTracker.Domain.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Domain/obj/Debug/net8.0/StudyTracker.Domain.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Domain/obj/Debug/net8.0/StudyTracker.Domain.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Domain/obj/Debug/net8.0/StudyTracker.Domain.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Domain/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Domain/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Host/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Host/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Host/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Host/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Host/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Host/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Host/StudyTracker.Host.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Host/StudyTracker.Host.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Host/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Host/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Host/obj/Debug/net8.0/StudyTracker.Host.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Host/obj/Debug/net8.0/StudyTracker.Host.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Host/obj/Debug/net8.0/StudyTracker.Host.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Host/obj/Debug/net8.0/StudyTracker.Host.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Host/obj/Debug/net8.0/StudyTracker.Host.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Host/obj/Debug/net8.0/StudyTracker.Host.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Host/obj/Debug/net8.0/StudyTracker.Host.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Host/obj/Debug/net8.0/StudyTracker.Host.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Host/obj/StudyTracker.Host.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Host/obj/StudyTracker.Host.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Host/obj/StudyTracker.Host.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Host/obj/StudyTracker.Host.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Host/obj/StudyTracker.Host.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Host/obj/StudyTracker.Host.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Host/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Host/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Host/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Host/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Host/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Host/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Host/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Host/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Host/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Host/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/StudyTracker.Infrastructure.Migrator.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/StudyTracker.Infrastructure.Migrator.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/obj/Debug/net8.0/StudyTracker.Infrastructure.Migrator.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/obj/Debug/net8.0/StudyTracker.Infrastructure.Migrator.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/obj/Debug/net8.0/StudyTracker.Infrastructure.Migrator.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/obj/Debug/net8.0/StudyTracker.Infrastructure.Migrator.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/obj/Debug/net8.0/StudyTracker.Infrastructure.Migrator.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/obj/Debug/net8.0/StudyTracker.Infrastructure.Migrator.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/obj/StudyTracker.Infrastructure.Migrator.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/obj/StudyTracker.Infrastructure.Migrator.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/obj/StudyTracker.Infrastructure.Migrator.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/obj/StudyTracker.Infrastructure.Migrator.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Migrator/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/StudyTracker.Infrastructure.Postgres.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/StudyTracker.Infrastructure.Postgres.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/obj/Debug/net8.0/StudyTracker.Infrastructure.Postgres.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/obj/Debug/net8.0/StudyTracker.Infrastructure.Postgres.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/obj/Debug/net8.0/StudyTracker.Infrastructure.Postgres.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/obj/Debug/net8.0/StudyTracker.Infrastructure.Postgres.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/obj/Debug/net8.0/StudyTracker.Infrastructure.Postgres.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/obj/Debug/net8.0/StudyTracker.Infrastructure.Postgres.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/obj/StudyTracker.Infrastructure.Postgres.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/obj/StudyTracker.Infrastructure.Postgres.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/obj/StudyTracker.Infrastructure.Postgres.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/obj/StudyTracker.Infrastructure.Postgres.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Presentation/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Presentation/StudyTracker.Presentation.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Presentation/StudyTracker.Presentation.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Presentation/obj/Debug/net8.0/StudyTracker.Presentation.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Presentation/obj/Debug/net8.0/StudyTracker.Presentation.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Presentation/obj/Debug/net8.0/StudyTracker.Presentation.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Presentation/obj/Debug/net8.0/StudyTracker.Presentation.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Presentation/obj/Debug/net8.0/StudyTracker.Presentation.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Presentation/obj/Debug/net8.0/StudyTracker.Presentation.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Presentation/obj/StudyTracker.Presentation.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Presentation/obj/StudyTracker.Presentation.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Presentation/obj/StudyTracker.Presentation.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Presentation/obj/StudyTracker.Presentation.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Presentation/obj/StudyTracker.Presentation.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Presentation/obj/StudyTracker.Presentation.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Presentation/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Presentation/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Presentation/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Presentation/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Presentation/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Presentation/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyTracker.Presentation/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/StudyTracker.Presentation/obj/rider.project.restore.info" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/954f61dd38b33caa2b736c73530bd5a294174437/src/Mvc/Mvc.Core/src/Builder/ControllerEndpointRouteBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/08338fcaa5c9b9a8190abb99222fed12aaba956c/src/libraries/System.Private.CoreLib/src/System/Text/EncodingProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9efc724329ab415f9a4af6b465bba4d6f918/69/13e41dce/ServiceCollectionServiceExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/StudyTracker.Host/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/StudyTracker.Host/Startup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/StudyTracker.Infrastructure.Postgres/Class1.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2y0HeL33FquC16bXo4w3ThSOihL" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -28,7 +140,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET Launch Settings Profile.StudyTracker.Backend.executor": "Debug",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,11 +188,17 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile" />
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
       <method v="2" />
     </configuration>
     <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
@@ -98,7 +219,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1748964666567</updated>
-      <workItem from="1748964667238" duration="1520000" />
+      <workItem from="1748964667238" duration="1642000" />
+      <workItem from="1748977988995" duration="12975000" />
     </task>
     <servers />
   </component>

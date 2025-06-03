@@ -5,7 +5,8 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "environmentVariables": {
-        "DOTNET_ENVIRONMENT": "Development"
+        "DOTNET_ENVIRONMENT": "Development",
+        "POSTGRES_CONNECTION_STRING": "Server=localhost;Port=5430;User Id=admin;Password=admin;Database=StudyTracker;SearchPath=study_tracker_schema;Include Error Detail=true"
       }
     }
   }
