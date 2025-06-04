@@ -19,4 +19,40 @@ public class UserController(IStudentService studentService) : ControllerBase
 
         return BadRequest(response);
     }
+    
+    [HttpPost("register")]
+    public async Task<IActionResult> Registration(AuthModel user)
+    {
+        var response = await studentService.Registration(user.Login, user.Password);
+        if (response.IsSuccess)
+        {
+            return Ok(response);
+        }
+
+        return BadRequest(response);
+    }
+    
+    [HttpGet("")]
+    public async Task<IActionResult> GetUsers()
+    {
+        var response = await studentService.GetUsers();
+        if (response.IsSuccess)
+        {
+            return Ok(response);
+        }
+
+        return BadRequest(response);
+    }
+    
+    [HttpGet("byCourses")]
+    public async Task<IActionResult> GetUsersByCourses(Guid courseId)
+    {
+        var response = await studentService.GetUsersByCourse(courseId);
+        if (response.IsSuccess)
+        {
+            return Ok(response);
+        }
+
+        return BadRequest(response);
+    }
 }

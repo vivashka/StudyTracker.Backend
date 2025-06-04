@@ -38,12 +38,10 @@ public class AssignmentService(IAssignmentProvider assignmentProvider) : IAssign
         try
         {
             var newAssignments = await assignmentProvider.UpdateOrInsertAssignment(assignment, CancellationToken.None);
-
-            if (studentId != null)
-            {
-                var taskState = UpdateOrInsertState((Guid)(assignment.AssignmentId ?? newAssignments.AssignmentId)!, (Guid)studentId,
-                    TaskState.NotStarted);
-            }
+            
+            var taskState = UpdateOrInsertState((Guid)(assignment.AssignmentId ?? newAssignments.AssignmentId)!, (Guid)studentId,
+                assignment.State ?? TaskState.NotStarted);
+            
             
 
             if (newAssignments.AssignmentId != null)

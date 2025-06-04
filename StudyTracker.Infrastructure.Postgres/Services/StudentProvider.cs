@@ -20,4 +20,49 @@ public class StudentProvider(IStudentRepository studentRepository) : IStudentPro
             throw;
         }
     }
+
+    public Task<Student> Registration(string login, string password, CancellationToken cancellationToken)
+    {
+        try
+        {
+            var student = studentRepository.Registration(login, password, cancellationToken);
+            
+            return student;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
+
+    public Task<Student[]> GetUsers(CancellationToken cancellationToken)
+    {
+        try
+        {
+            var student = studentRepository.GetUsers(cancellationToken);
+            
+            return student;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
+
+    public Task<Student[]> GetUsersByCourse(Guid courseId, CancellationToken cancellationToken)
+    {
+        try
+        {
+            var student = studentRepository.GetUsersByCourse(courseId, cancellationToken);
+            
+            return student;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
 }

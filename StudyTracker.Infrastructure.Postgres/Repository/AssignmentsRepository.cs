@@ -36,12 +36,13 @@ public class AssignmentsRepository : BaseRepository, IAssignmentsRepository
         Guid assignmentId = assignment.AssignmentId ?? Guid.NewGuid();
         var sqlRequest = """
                          INSERT INTO  "Assignments"
-                         VALUES (@AssignmentId, @Name, @Description, @CourseId)
-                            ON CONFLICT ("Name")
+                         VALUES (@AssignmentId, @Name, @Description, @CourseId, @Deadline)
+                            ON CONFLICT ("AssignmentId")
                          DO UPDATE SET 
                              "Name" = COALESCE(EXCLUDED."Name", "Assignments"."Name"),
                              "Description" = COALESCE(EXCLUDED."Description", "Assignments"."Description"),
-                             "CourseId" = COALESCE(EXCLUDED."CourseId", "Assignments"."CourseId")
+                             "CourseId" = COALESCE(EXCLUDED."CourseId", "Assignments"."CourseId"),
+                             "Deadline" = COALESCE(EXCLUDED."Deadline", "Assignments"."Deadline")
                          RETURNING *;
                          """;
         
