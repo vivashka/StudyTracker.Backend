@@ -67,4 +67,19 @@ public class CoursesRepository : BaseRepository, ICoursesRepository
 
         return await ExecuteQuerySingleAsync<Guid>(sqlRequest, param, cancellationToken);
     }
+
+    public async Task<Course> DeleteCourse(Guid courseId, CancellationToken cancellationToken)
+    {
+        string sqlRequest = """
+                            DELETE FROM "Courses"
+                            WHERE "AssignmentId" = @CourseId
+                            RETURNING *;
+                            """;
+
+       
+        var param = new DynamicParameters();
+        param.Add("CourseId", courseId);
+        
+        return await ExecuteQuerySingleAsync<Course>(sqlRequest, param, cancellationToken);
+    }
 }

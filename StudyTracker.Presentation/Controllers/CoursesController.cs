@@ -43,4 +43,16 @@ public class CoursesController(ICoursesService coursesService) : ControllerBase
 
         return BadRequest(response);
     } 
+    
+    [HttpDelete("")]
+    public async Task<IActionResult> DeleteCourse(Guid courseId, Guid studentId)
+    {
+        var response = await coursesService.DeleteCourse(courseId, studentId);
+        if (response.IsSuccess)
+        {
+            return Ok(response);
+        }
+
+        return BadRequest(response);
+    } 
 }

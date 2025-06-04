@@ -50,4 +50,18 @@ public class AssignmentsController(IAssignmentService assignmentService) : Contr
 
         return BadRequest(response);
     }
+    
+    [HttpDelete]
+    [Route("")]
+    public async Task<IActionResult> DeleteAssignment(Guid assignmentId)
+    {
+        var response = await assignmentService.DeleteAssignment(assignmentId);
+
+        if (response.IsSuccess)
+        {
+            return Ok(response);
+        }
+
+        return BadRequest(response);
+    }
 }

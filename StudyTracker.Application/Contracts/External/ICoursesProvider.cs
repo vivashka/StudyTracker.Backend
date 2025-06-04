@@ -11,4 +11,6 @@ public interface ICoursesProvider
     public Task<Course> CreateCourse(Course course, CancellationToken cancellationToken);
     
     public Task<Guid> AssignCourse(Guid courseId, Guid studentId, CancellationToken cancellationToken);
+    
+    public Task<Course> DeleteCourse(Guid courseId, CancellationToken cancellationToken);
 }

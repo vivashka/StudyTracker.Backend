@@ -66,4 +66,19 @@ public class CoursesProvider(ICoursesRepository coursesRepository) : ICoursesPro
             return new Guid();
         }
     }
+
+    public async Task<Course> DeleteCourse(Guid courseId, CancellationToken cancellationToken)
+    {
+        try
+        {
+            var courses = await coursesRepository.DeleteCourse(courseId, cancellationToken);
+
+            return courses;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return new Course();
+        }
+    }
 }

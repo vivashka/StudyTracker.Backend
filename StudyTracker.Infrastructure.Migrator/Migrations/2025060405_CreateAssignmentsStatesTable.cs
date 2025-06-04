@@ -13,8 +13,8 @@ public class CreateTasksStatesTable : Migration
                     "StudentId" UUID NOT NULL,
                     "States" int NOT NULL,
                                                    
-                    CONSTRAINT fk_Tasks FOREIGN KEY ("AssignmentId") REFERENCES "Assignments" ("AssignmentId"),
-                    CONSTRAINT fk_Students_Task FOREIGN KEY ("StudentId") REFERENCES "Students" ("StudentId"),
+                    CONSTRAINT fk_Tasks FOREIGN KEY ("AssignmentId") REFERENCES "Assignments" ("AssignmentId") ON DELETE CASCADE,
+                    CONSTRAINT fk_Students_Task FOREIGN KEY ("StudentId") REFERENCES "Students" ("StudentId") ON DELETE CASCADE,
                     CONSTRAINT unique_assignment_student UNIQUE ("AssignmentId", "StudentId"));
                     """);
     }

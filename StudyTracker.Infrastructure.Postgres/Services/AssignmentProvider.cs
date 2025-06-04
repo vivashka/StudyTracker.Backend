@@ -27,4 +27,11 @@ public class AssignmentProvider(IAssignmentsRepository assignmentsRepository) : 
 
         return assignments;
     }
+
+    public async Task<Assignments> DeleteAssignment(Guid assignmentId, CancellationToken cancellationToken)
+    {
+        var assignments = await assignmentsRepository.DeleteAssignment(assignmentId, cancellationToken);
+
+        return assignments;
+    }
 }

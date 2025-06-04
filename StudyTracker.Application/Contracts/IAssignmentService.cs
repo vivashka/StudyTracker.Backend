@@ -11,4 +11,6 @@ public interface IAssignmentService
     public Task<ResponseModel<Assignments>> UpdateOrInsertAssignment(Guid? studentId, Assignments assignment);
     
     public Task<ResponseModel<int>> UpdateOrInsertState(Guid assignmentId, Guid studentId, TaskState state);
+    
+    public Task<ResponseModel<bool>> DeleteAssignment(Guid assignmentId);
 }

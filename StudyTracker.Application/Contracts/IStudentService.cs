@@ -5,5 +5,5 @@ namespace StudyTracker.Application.Contracts;
 
 public interface IStudentService
 {
-    public Task<ResponseModel<bool>> Authenticate(string login, string password);
+    public Task<ResponseModel<Student>> Authenticate(string login, string password);
 }

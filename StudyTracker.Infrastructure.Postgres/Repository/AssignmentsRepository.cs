@@ -66,4 +66,19 @@ public class AssignmentsRepository : BaseRepository, IAssignmentsRepository
 
         return await ExecuteQuerySingleAsync<int>(sqlRequest, param, cancellationToken);
     }
+
+    public async Task<Assignments> DeleteAssignment(Guid assignmentId, CancellationToken cancellationToken)
+    {
+        string sqlRequest = """
+                         DELETE FROM "Assignments"
+                         WHERE "AssignmentId" = @AssignmentId
+                         RETURNING *;
+                         """;
+
+       
+        var param = new DynamicParameters();
+        param.Add("AssignmentId", assignmentId);
+        
+        return await ExecuteQuerySingleAsync<Assignments>(sqlRequest, param, cancellationToken);
+    }
 }

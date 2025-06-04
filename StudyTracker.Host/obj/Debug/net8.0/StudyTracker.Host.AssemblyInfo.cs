@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StudyTracker.Host")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dad8356c82d465da77ef0e9f6c3e2a73e27b63ee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1376c7c6538a93e8120bc0529a51343e83e98b6")]
 [assembly: System.Reflection.AssemblyProductAttribute("StudyTracker.Host")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StudyTracker.Host")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

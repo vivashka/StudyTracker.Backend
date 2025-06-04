@@ -10,4 +10,6 @@ public interface IAssignmentsRepository
     public Task<Assignments> UpdateOrInsertAssignment(Assignments assignment, CancellationToken cancellationToken);
     
     public Task<int> UpdateOrInsertState(Guid assignmentId, Guid studentId, TaskState state, CancellationToken cancellationToken);
+    
+    public Task<Assignments> DeleteAssignment(Guid assignmentId, CancellationToken cancellationToken);
 }

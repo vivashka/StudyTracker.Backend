@@ -89,4 +89,25 @@ public class CoursesService(
                 new ActionErrorModel(400, "Непредвиденная ошибка " + ex.Message));
         }
     }
+
+    public async Task<ResponseModel<bool>> DeleteCourse(Guid courseId, Guid studentId)
+    {
+        try
+        {
+            if (studentId == new Guid(admin.Value.AdminId))
+            {
+                var student = await coursesProvider.DeleteCourse(courseId, CancellationToken.None);
+                
+                return new ResponseModel<bool>(true, true, null);
+            }
+            return new ResponseModel<bool>(false, true,
+                new ActionErrorModel(200, "Не удалось удалить курс. Пользователь не является администратором"));
+        }
+        catch (Exception ex)
+        {
+            return new ResponseModel<bool>(false,
+                false,
+                new ActionErrorModel(400, "Непредвиденная ошибка " + ex.Message));
+        }
+    }
 }

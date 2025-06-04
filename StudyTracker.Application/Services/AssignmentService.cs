@@ -87,4 +87,29 @@ public class AssignmentService(IAssignmentProvider assignmentProvider) : IAssign
                 new ActionErrorModel(400, "Непредвиденная ошибка " + ex.Message));
         }
     }
+
+    public async Task<ResponseModel<bool>> DeleteAssignment(Guid assignmentId)
+    {
+        try
+        {
+            var assignments = await assignmentProvider.DeleteAssignment(assignmentId, CancellationToken.None);
+
+            if (assignments.AssignmentId != null)
+            {
+                return new ResponseModel<bool>(true,
+                    true,
+                    null);
+                
+            }
+            return new ResponseModel<bool>(false,
+                true,
+                new ActionErrorModel(200, "Не удалось удалить задание"));
+        }
+        catch (Exception ex)
+        {
+            return new ResponseModel<bool>(false,
+                false,
+                new ActionErrorModel(400, "Непредвиденная ошибка " + ex.Message));
+        }
+    }
 }
