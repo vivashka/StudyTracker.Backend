@@ -39,7 +39,9 @@ public class AssignmentsRepository : BaseRepository, IAssignmentsRepository
                          VALUES (@AssignmentId, @Name, @Description, @CourseId)
                             ON CONFLICT ("Name")
                          DO UPDATE SET 
-                             "Description" = EXCLUDED."Description"
+                             "Name" = COALESCE(EXCLUDED."Name", "Assignments"."Name"),
+                             "Description" = COALESCE(EXCLUDED."Description", "Assignments"."Description"),
+                             "CourseId" = COALESCE(EXCLUDED."CourseId", "Assignments"."CourseId")
                          RETURNING *;
                          """;
         

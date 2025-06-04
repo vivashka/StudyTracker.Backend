@@ -97,6 +97,10 @@ public class CoursesService(
             if (studentId == new Guid(admin.Value.AdminId))
             {
                 var student = await coursesProvider.DeleteCourse(courseId, CancellationToken.None);
+                if (student.CourseId == null)
+                {
+                    return new ResponseModel<bool>(false, true, null);
+                }
                 
                 return new ResponseModel<bool>(true, true, null);
             }

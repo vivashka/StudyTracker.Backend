@@ -36,18 +36,35 @@ public class CoursesRepository : BaseRepository, ICoursesRepository
     {
 
         Guid courseId = course.CourseId ?? Guid.NewGuid();
+        
         string sqlRequest = """
-                            INSERT INTO "Courses"
-                            VALUES (@CourseId, @Name, @Professor, @Description)
-                            ON CONFLICT ("Name")
-                            DO UPDATE SET 
-                                "Professor" = EXCLUDED."Professor"
-                                "Description" = EXCLUDED."Description"
-                            RETURNING *;
+                            WITH updated AS (
+                                UPDATE "Courses"
+                                SET "Name" = @Name, "Professor" = @Professor, "Description" = @Description
+                                WHERE "CourseId" = @CourseId
+                                RETURNING *
+                            ),
+                            inserted AS (
+                                INSERT INTO "Courses" ("CourseId", "Name", "Professor", "Description")
+                                SELECT @CourseId, @Name, @Professor, @Description
+                                WHERE NOT EXISTS (SELECT 1 FROM updated)
+                                ON CONFLICT ("Name")
+                                DO UPDATE SET
+                                    "Professor" = EXCLUDED."Professor",
+                                    "Description" = EXCLUDED."Description"
+                                RETURNING *
+                            )
+                            SELECT * FROM updated
+                            UNION ALL
+                            SELECT * FROM inserted;
                             """;
-
+        
         var param = new DynamicParameters(course);
         param.Add("CourseId", courseId);
+        param.Add("Name", course.Name);
+        param.Add("Description", course.Description);
+        param.Add("Professor", course.Professor);
+        
 
         return await ExecuteQuerySingleAsync<Course>(sqlRequest, param, cancellationToken);
     }
@@ -72,7 +89,7 @@ public class CoursesRepository : BaseRepository, ICoursesRepository
     {
         string sqlRequest = """
                             DELETE FROM "Courses"
-                            WHERE "AssignmentId" = @CourseId
+                            WHERE "CourseId" = @CourseId
                             RETURNING *;
                             """;
 

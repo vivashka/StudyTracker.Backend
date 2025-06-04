@@ -27,7 +27,7 @@ public class Startup(IConfiguration configuration)
         
         applicationBuilder.UseSwagger();
         applicationBuilder.UseSwaggerUI();
-        applicationBuilder.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader());
+        applicationBuilder.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
         applicationBuilder.UseEndpoints(endpoints =>
         {
             endpoints.MapControllers();

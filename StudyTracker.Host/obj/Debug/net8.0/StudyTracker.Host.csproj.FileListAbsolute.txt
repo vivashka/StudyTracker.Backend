@@ -125,3 +125,4 @@ C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\bin\Debug\ne
 C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\bin\Debug\net8.0\Npgsql.dll
 C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\bin\Debug\net8.0\StudyTracker.Infrastructure.Postgres.dll
 C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\bin\Debug\net8.0\StudyTracker.Infrastructure.Postgres.pdb
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\bin\Debug\net8.0\logs\log20250605.json

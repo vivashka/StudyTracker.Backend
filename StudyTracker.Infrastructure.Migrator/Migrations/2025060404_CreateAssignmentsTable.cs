@@ -12,7 +12,7 @@ public class CreateAssignmentsTable : Migration {
                     "Description" text NOT NULL,
                     "CourseId" uuid NOT NULL,
                     "Deadline" timestamp,
-                    CONSTRAINT fk_Courses_Task FOREIGN KEY ("CourseId") REFERENCES "Courses" ("CourseId"));
+                    CONSTRAINT fk_Courses_Task FOREIGN KEY ("CourseId") REFERENCES "Courses" ("CourseId") ON DELETE CASCADE);
                     """);
     }
 
