@@ -2199,7 +2199,9 @@
       },
       "StudyTracker.Application/1.0.0": {
         "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.1",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "8.0.0",
           "StudyTracker.Domain": "1.0.0"
         },
         "runtime": {

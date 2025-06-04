@@ -14,7 +14,8 @@ public class CreateTasksStatesTable : Migration
                     "States" int NOT NULL,
                                                    
                     CONSTRAINT fk_Tasks FOREIGN KEY ("AssignmentId") REFERENCES "Assignments" ("AssignmentId"),
-                    CONSTRAINT fk_Students_Task FOREIGN KEY ("StudentId") REFERENCES "Students" ("StudentId"));
+                    CONSTRAINT fk_Students_Task FOREIGN KEY ("StudentId") REFERENCES "Students" ("StudentId"),
+                    CONSTRAINT unique_assignment_student UNIQUE ("AssignmentId", "StudentId"));
                     """);
     }
 

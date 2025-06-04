@@ -36,4 +36,34 @@ public class CoursesProvider(ICoursesRepository coursesRepository) : ICoursesPro
             return [];
         }
     }
+
+    public async Task<Course> CreateCourse(Course course, CancellationToken cancellationToken)
+    {
+        try
+        {
+            var courses = await coursesRepository.CreateCourse(course, cancellationToken);
+
+            return courses;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return new Course();
+        }
+    }
+
+    public async Task<Guid> AssignCourse(Guid courseId, Guid studentId, CancellationToken cancellationToken)
+    {
+        try
+        {
+            var courses = await coursesRepository.AssignCourse(studentId, courseId, cancellationToken);
+
+            return courses;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return new Guid();
+        }
+    }
 }

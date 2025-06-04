@@ -31,4 +31,40 @@ public class CoursesRepository : BaseRepository, ICoursesRepository
         
         return ExecuteQueryAsync<Course>(sqlRequest, param, cancellationToken);
     }
+
+    public async Task<Course> CreateCourse(Course course, CancellationToken cancellationToken)
+    {
+
+        Guid courseId = course.CourseId ?? Guid.NewGuid();
+        string sqlRequest = """
+                            INSERT INTO "Courses"
+                            VALUES (@CourseId, @Name, @Professor, @Description)
+                            ON CONFLICT ("Name")
+                            DO UPDATE SET 
+                                "Professor" = EXCLUDED."Professor"
+                                "Description" = EXCLUDED."Description"
+                            RETURNING *;
+                            """;
+
+        var param = new DynamicParameters(course);
+        param.Add("CourseId", courseId);
+
+        return await ExecuteQuerySingleAsync<Course>(sqlRequest, param, cancellationToken);
+    }
+
+    public async Task<Guid> AssignCourse(Guid courseId, Guid studentId, CancellationToken cancellationToken)
+    {
+        string sqlRequest = """
+                            INSERT INTO "StudentsCourses"
+                            VALUES (@StudentId, @CourseId)
+                                ON CONFLICT ("StudentId", "CourseId") DO NOTHING
+                            RETURNING "StudentId";
+                            """;
+
+        var param = new DynamicParameters();
+        param.Add("StudentId", studentId);
+        param.Add("CourseId", courseId);
+
+        return await ExecuteQuerySingleAsync<Guid>(sqlRequest, param, cancellationToken);
+    }
 }

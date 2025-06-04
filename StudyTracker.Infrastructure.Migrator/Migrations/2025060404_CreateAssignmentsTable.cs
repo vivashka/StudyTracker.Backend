@@ -8,11 +8,11 @@ public class CreateAssignmentsTable : Migration {
     {
         Execute.Sql("""
                     CREATE TABLE "Assignments" ("AssignmentId" UUID PRIMARY KEY,
-                    "Name" text NOT NULL,
+                    "Name" text NOT NULL UNIQUE,
                     "Description" text NOT NULL,
                     "CourseId" uuid NOT NULL,
                     "Deadline" timestamp,
-                    CONSTRAINT fk_Courses_Task FOREIGN KEY ("CourseId") REFERENCES "Course" ("CourseId"));
+                    CONSTRAINT fk_Courses_Task FOREIGN KEY ("CourseId") REFERENCES "Courses" ("CourseId"));
                     """);
     }
 

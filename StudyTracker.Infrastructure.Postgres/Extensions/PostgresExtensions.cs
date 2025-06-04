@@ -33,12 +33,14 @@ public static class PostgresExtensions
     {
         service.AddScoped<IStudentRepository, StudentRepository>();
         service.AddScoped<ICoursesRepository, CoursesRepository>();
+        service.AddScoped<IAssignmentsRepository, AssignmentsRepository>();
     }
     
     private static void ConfigureServices(this IServiceCollection service)
     {
         service.AddScoped<IStudentProvider, StudentProvider>();
         service.AddScoped<ICoursesProvider, CoursesProvider>();
+        service.AddScoped<IAssignmentProvider, AssignmentProvider>();
     }
     
     private static string GetConnectionString()

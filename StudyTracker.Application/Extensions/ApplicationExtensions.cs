@@ -14,6 +14,7 @@ public static class ApplicationExtensions
         Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
         service.AddScoped<IStudentService, StudentService>();
         service.AddScoped<ICoursesService, CoursesService>();
+        service.AddScoped<IAssignmentService, AssignmentService>();
         
         service.Configure<Admin>(configuration.GetSection(nameof(Admin)));
 

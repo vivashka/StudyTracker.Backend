@@ -4,5 +4,5 @@ namespace StudyTracker.Application.Models;
 
 public record Admin
 {
-    public Guid AdminId { get; init; }
+    public string AdminId { get; init; }
 }

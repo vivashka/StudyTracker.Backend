@@ -1,4 +1,5 @@
 using StudyTracker.Application.Contracts.External;
+using StudyTracker.Domain.Enums;
 using StudyTracker.Domain.Models;
 using StudyTracker.Infrastructure.Postgres.Contracts;
 
@@ -13,8 +14,17 @@ public class AssignmentProvider(IAssignmentsRepository assignmentsRepository) : 
         return assignments;
     }
 
-    public Task<Assignments[]> UpdateOrInsertAssignment(Guid studentId, Guid assignmentId, CancellationToken cancellationToken)
+    public async Task<Assignments> UpdateOrInsertAssignment(Assignments assignment, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var assignments = await assignmentsRepository.UpdateOrInsertAssignment(assignment, cancellationToken);
+
+        return assignments;
+    }
+
+    public async Task<int> UpdateOrInsertState(Guid assignmentId, Guid studentId, TaskState state, CancellationToken cancellationToken)
+    {
+        var assignments = await assignmentsRepository.UpdateOrInsertState(assignmentId, studentId, state, cancellationToken);
+
+        return assignments;
     }
 }

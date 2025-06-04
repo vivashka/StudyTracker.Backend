@@ -9,7 +9,8 @@ public class CreateCoursesTable : Migration
     {
         Execute.Sql("""
                     CREATE TABLE "Courses" ("CourseId" UUID PRIMARY KEY,
-                    "Name" text not null,
+                    "Name" text not null UNIQUE,
+                    "Description" text not null,
                     "Professor" text not null);
                     """);
     }
