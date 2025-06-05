@@ -126,3 +126,13 @@ C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\bin\Debug\ne
 C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\bin\Debug\net8.0\StudyTracker.Infrastructure.Postgres.dll
 C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\bin\Debug\net8.0\StudyTracker.Infrastructure.Postgres.pdb
 C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\bin\Debug\net8.0\logs\log20250605.json
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\obj\Debug\net8.0\StudyTracker.Host.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\obj\Debug\net8.0\StudyTracker.Host.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\obj\Debug\net8.0\staticwebassets\msbuild.StudyTracker.Host.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\obj\Debug\net8.0\staticwebassets\msbuild.build.StudyTracker.Host.props
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.StudyTracker.Host.props
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.StudyTracker.Host.props
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\obj\Debug\net8.0\scopedcss\bundle\StudyTracker.Host.styles.css

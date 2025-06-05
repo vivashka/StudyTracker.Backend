@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "QisVrx47qO0xMJ4kEgTTBgvEL7bYA6G6naNL7LX7d+Q=",
+  "Source": "StudyTracker.Host",
+  "BasePath": "_content/StudyTracker.Host",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
