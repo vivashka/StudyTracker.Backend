@@ -1,3 +1,5 @@
+using System.Security.Cryptography;
+using System.Text;
 using Microsoft.Extensions.Options;
 using StudyTracker.Application.Contracts;
 using StudyTracker.Application.Contracts.External;
@@ -39,14 +41,15 @@ public class StudentService(IStudentProvider studentProvider, IOptions<Admin> ad
     {
         try
         {
-            var student = await studentProvider.Registration(login, password, CancellationToken.None);
+            var curHash = CreateMd5(password + login, Encoding.GetEncoding(866));
+            var student = await studentProvider.Registration(login, curHash.ToLower(), CancellationToken.None);
 
             if  (student.StudentId == new Guid(admin.Value.AdminId))
             {
                 student.IsAdmin = true;
             }
 
-            if (student.Password.Equals(password))
+            if (student.StudentId != Guid.Empty)
             {
                 return new ResponseModel<Student>(student, true, null);
             }
@@ -75,10 +78,15 @@ public class StudentService(IStudentProvider studentProvider, IOptions<Admin> ad
                 newStudents.AddRange(students);
                 newStudents.RemoveAt(newStudents.IndexOf(newStudents.FirstOrDefault(s => s.StudentId == new Guid(admin.Value.AdminId)))) ;
             }
-            
+
+            if (newStudents.Count > 0)
+            {
+                return new ResponseModel<List<Student?>>(newStudents,
+                    true, null);
+            }
             return new ResponseModel<List<Student?>>(newStudents,
-                false,
-                new ActionErrorModel(200, "Данные пользователя не совпадают с текущими"));
+                true,
+                new ActionErrorModel(200, "Пользователи не найдены"));
         }
         catch (Exception ex)
         {
@@ -101,10 +109,15 @@ public class StudentService(IStudentProvider studentProvider, IOptions<Admin> ad
                 newStudents.AddRange(students);
                 newStudents.RemoveAt(newStudents.IndexOf(newStudents.FirstOrDefault(s => s.StudentId == new Guid(admin.Value.AdminId)))) ;
             }
-            
+
+            if (newStudents.Count > 0)
+            {
+                return new ResponseModel<List<Student?>>(newStudents,
+                    true, null);
+            }
             return new ResponseModel<List<Student?>>(newStudents,
-                false,
-                new ActionErrorModel(200, "Данные пользователя не совпадают с текущими"));
+                true,
+                new ActionErrorModel(200, "Пользователи не найдены"));
         }
         catch (Exception ex)
         {
@@ -112,5 +125,14 @@ public class StudentService(IStudentProvider studentProvider, IOptions<Admin> ad
                 false,
                 new ActionErrorModel(400, "Непредвиденная ошибка" + ex.Message));
         }
+    }
+    
+    private static string CreateMd5(string text, Encoding encoding)
+    {
+        var inputBytes = encoding.GetBytes(text);
+
+        var hashBytes = MD5.HashData(inputBytes);
+
+        return Convert.ToHexString(hashBytes);
     }
 }

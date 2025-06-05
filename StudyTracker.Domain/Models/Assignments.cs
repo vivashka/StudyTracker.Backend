@@ -8,6 +8,6 @@ public class Assignments
     public string? Name { get; init; }
     public string? Description { get; init; }
     public Guid CourseId { get; init; }
-    public TaskState? State { get; init; }
+    public TaskState? State { get; set; }
     public DateTime? DeadLine { get; init; }
 }

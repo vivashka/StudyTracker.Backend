@@ -73,14 +73,10 @@ public class CoursesService(
     {
         try
         {
-            if (studentId == new Guid(admin.Value.AdminId))
-            {
+            
                 var student = await coursesProvider.AssignCourse(studentId, courseId, CancellationToken.None);
                 
                 return new ResponseModel<Guid>(student, true, null);
-            }
-            return new ResponseModel<Guid>(new Guid(), true,
-                new ActionErrorModel(200, "Не удалось назначить студента на курс. Пользователь не является администратором"));
         }
         catch (Exception ex)
         {

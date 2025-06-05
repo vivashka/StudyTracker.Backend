@@ -22,16 +22,17 @@ public class StudentRepository : BaseRepository, IStudentRepository
 
     public async Task<Student> Registration(string login, string password, CancellationToken cancellationToken)
     {
-        string sqlRequest = """
-                            INSERT INTO "Students"
-                            VALUES (@login, @Password)
-                            """;
+        string insertSql = """
+                           INSERT INTO "Students"
+                           VALUES (gen_random_uuid(), @Login, @Password)
+                           RETURNING *;
+                           """;
 
-        var param = new DynamicParameters();
-        param.Add("Login", login);
-        param.Add("Password", password);
+        var insertParam = new DynamicParameters();
+        insertParam.Add("Login", login);
+        insertParam.Add("Password", password);
 
-        return await ExecuteQuerySingleAsync<Student>(sqlRequest, param, cancellationToken);
+        return await ExecuteQuerySingleAsync<Student>(insertSql, insertParam, cancellationToken);
     }
 
     public async Task<Student[]> GetUsers(CancellationToken cancellationToken)
@@ -50,8 +51,9 @@ public class StudentRepository : BaseRepository, IStudentRepository
     {
         string sqlRequest = """
                             SELECT *
-                            FROM "Students"
-                            LEFT JOIN "StudentsCourses" sc ON sc."CourseId" = @CourseId
+                            FROM "Students" s
+                            JOIN "StudentsCourses" sc ON s."StudentId" = sc."StudentId"
+                            WHERE sc."CourseId" = @CourseId
                             """;
 
         var param = new DynamicParameters();

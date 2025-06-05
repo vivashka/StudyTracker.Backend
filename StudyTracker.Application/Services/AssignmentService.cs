@@ -14,6 +14,15 @@ public class AssignmentService(IAssignmentProvider assignmentProvider) : IAssign
         {
             var assignments = await assignmentProvider.GetAssignments(studentId, courseId, CancellationToken.None);
 
+            foreach (var taskStudent in assignments)
+            {
+                if (taskStudent.State == null)
+                {
+                    var taskState = UpdateOrInsertState((Guid)taskStudent.AssignmentId!, studentId, TaskState.NotStarted);
+                    taskStudent.State = TaskState.NotStarted;
+                }
+            }
+
             if (assignments.Length > 0)
             {
                 return new ResponseModel<Assignments[]>(assignments,
