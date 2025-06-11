@@ -136,3 +136,4 @@ C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\obj\Debug\ne
 C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.StudyTracker.Host.props
 C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\obj\Debug\net8.0\scopedcss\bundle\StudyTracker.Host.styles.css
+C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\bin\Debug\net8.0\logs\log20250606.json

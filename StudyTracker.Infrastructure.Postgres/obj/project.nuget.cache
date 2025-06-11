@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ujc3hnVSZVeXMD3mbZUXAQq2USiyzapaNUvFzeSizLjMLmUitG11ZJe1R4gZbBj/bY6+/idQ2vBDUcngxBeekg==",
+  "dgSpecHash": "01qlfw3rGMOU5FoYMX14s1sR2STsFuEEXmqi9E42BIttRDo1zzBJ9wnmAd+rFoCWWXfVbD6EuBbgOwTTD7T5Og==",
   "success": true,
   "projectFilePath": "C:\\Users\\vovac\\RiderProjects\\StudyTracker.Backend\\StudyTracker.Infrastructure.Postgres\\StudyTracker.Infrastructure.Postgres.csproj",
   "expectedPackageFiles": [

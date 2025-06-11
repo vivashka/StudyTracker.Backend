@@ -3,19 +3,26 @@ services:
   studytracker.backend:
     build:
       context: "C:\\Users\\vovac\\RiderProjects\\StudyTracker.Backend"
-      dockerfile: "StudyTracker.Host/Dockerfile"
-      target: "build"
-    command: []
+      dockerfile: "Dockerfile"
+      args:
+        BUILD_CONFIGURATION: "Debug"
     entrypoint:
-    - "dotnet"
-    - "/app/bin/Debug/net8.0/StudyTracker.Host.dll"
+    - "/opt/rider-debugger/linux-x64/JetBrains.Debugger.Worker"
+    - "--runtimeconfig"
+    - "/opt/rider-debugger/JetBrains.Debugger.Worker.runtimeconfig.json"
+    - "--mode=server"
+    - "--frontend-port=57100"
+    - "--backend-port=57300"
+    - "--timeout=60"
     environment:
-      ASPNETCORE_ENVIRONMENT: "Development"
-      DOTNET_USE_POLLING_FILE_WATCHER: "true"
-    image: "studytracker.backend:dev"
-    ports: []
+      RIDER_DEBUGGER_LOG_DIR: "/var/opt/rider-debugger"
+      RESHARPER_LOG_CONF: "/etc/opt/rider-debugger/backend-log.xml"
+    ports:
+    - "127.0.0.1:57000:57100"
+    - "127.0.0.1:57200:57300"
     volumes:
-    - "C:\\Users\\vovac\\.nuget\\packages:/root/.nuget/packages"
-    - "C:\\Users\\vovac\\RiderProjects\\StudyTracker.Backend\\StudyTracker.Host:/app:rw"
-    - "C:\\Users\\vovac\\RiderProjects\\StudyTracker.Backend:/src:rw"
-    working_dir: "/app"
+    - "C:\\Users\\vovac\\AppData\\Local\\JetBrains\\RiderRemoteDebugger\\2024.1.4\\\
+      Linux64:/opt/rider-debugger"
+    - "C:\\Program Files\\JetBrains\\JetBrains Rider 2024.1.4\\bin:/etc/opt/rider-debugger/backend-log.xml"
+    - "C:\\Users\\vovac\\AppData\\Local\\JetBrains\\Rider2024.1\\log\\DebuggerWorker\\\
+      JetBrains.Debugger.Worker.2025_6_06_16_41_20:/var/opt/rider-debugger:rw"

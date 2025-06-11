@@ -1,0 +1,240 @@
+2025-06-06 15:25:17.506 +05:00 [Fatal] The Application failed to start.
+Npgsql.NpgsqlException (0x80004005): Failed to connect to [::1]:5430
+ ---> System.Net.Sockets.SocketException (10061): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+   at Npgsql.Internal.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.Internal.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|214_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.Open()
+   at FluentMigrator.Runner.Processors.GenericProcessorBase.<>c__DisplayClass6_1.<.ctor>b__1()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at FluentMigrator.Runner.Processors.GenericProcessorBase.get_Connection()
+   at FluentMigrator.Runner.Processors.GenericProcessorBase.EnsureConnectionIsOpen()
+   at FluentMigrator.Runner.Processors.Postgres.PostgresProcessor.Exists(String template, Object[] args)
+   at FluentMigrator.Runner.Processors.Postgres.PostgresProcessor.TableExists(String schemaName, String tableName)
+   at FluentMigrator.Runner.VersionLoader.get_AlreadyCreatedVersionTable()
+   at FluentMigrator.Runner.VersionLoader.LoadVersionInfo()
+   at FluentMigrator.Runner.VersionLoader..ctor(IProcessorAccessor processorAccessor, IConventionSet conventionSet, IMigrationRunnerConventions conventions, IVersionTableMetaData versionTableMetaData, IMigrationRunner runner)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithManyArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance[T](IServiceProvider provider, Object[] parameters)
+   at Microsoft.Extensions.DependencyInjection.FluentMigratorServiceCollectionExtensions.<>c.<AddFluentMigratorCore>b__0_6(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at FluentMigrator.Runner.MigrationRunner.get_VersionLoader()
+   at FluentMigrator.Runner.MigrationRunner.ListMigrations()
+   at StudyTracker.Infrastructure.Migrator.Migrations.Database.MigrationManager.MigrateDatabase(IHost host) in C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Infrastructure.Migrator\Migrations\Database\MigrationManager.cs:line 18
+   at StudyTracker.Backend.Program.Main(String[] args) in C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\Program.cs:line 26
+2025-06-06 15:26:17.976 +05:00 [Information] Migrations
+2025-06-06 15:26:18.046 +05:00 [Information] 2025060400: CreateSchema
+2025-06-06 15:26:18.047 +05:00 [Information] 2025060401: CreateStudentsTable
+2025-06-06 15:26:18.048 +05:00 [Information] 2025060402: CreateCoursesTable
+2025-06-06 15:26:18.049 +05:00 [Information] 2025060403: CreateStudentsCoursesTable
+2025-06-06 15:26:18.050 +05:00 [Information] 2025060404: CreateAssignmentsTable
+2025-06-06 15:26:18.051 +05:00 [Warning] 2025060405: CreateTasksStatesTable (current)
+2025-06-06 15:26:18.415 +05:00 [Information] Now listening on: "http://localhost:5000"
+2025-06-06 15:26:18.418 +05:00 [Information] Application started. Press Ctrl+C to shut down.
+2025-06-06 15:26:18.419 +05:00 [Information] Hosting environment: "Development"
+2025-06-06 15:26:18.420 +05:00 [Information] Content root path: "C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host"
+2025-06-06 15:26:28.455 +05:00 [Information] Request starting "HTTP/1.1" "OPTIONS" "http"://"localhost:5000""""/api/Assignments""?studentId=e6b0f402-dcdf-4a52-b52f-21922de02d27&courseId=undefined" - null null
+2025-06-06 15:26:28.519 +05:00 [Information] CORS policy execution successful.
+2025-06-06 15:26:28.540 +05:00 [Information] Request finished "HTTP/1.1" "OPTIONS" "http"://"localhost:5000""""/api/Assignments""?studentId=e6b0f402-dcdf-4a52-b52f-21922de02d27&courseId=undefined" - 204 null null 92.0977ms
+2025-06-06 15:26:28.547 +05:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5000""""/api/Assignments""?studentId=e6b0f402-dcdf-4a52-b52f-21922de02d27&courseId=undefined" - "application/json" null
+2025-06-06 15:26:28.554 +05:00 [Information] CORS policy execution successful.
+2025-06-06 15:26:28.558 +05:00 [Information] Executing endpoint '"StudyTracker.Presentation.Controllers.AssignmentsController.GetAssignments (StudyTracker.Presentation)"'
+2025-06-06 15:26:28.588 +05:00 [Information] Route matched with "{action = \"GetAssignments\", controller = \"Assignments\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAssignments(System.Guid, System.Guid)" on controller "StudyTracker.Presentation.Controllers.AssignmentsController" ("StudyTracker.Presentation").
+2025-06-06 15:26:28.620 +05:00 [Information] Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'.
+2025-06-06 15:26:28.676 +05:00 [Information] Executed action "StudyTracker.Presentation.Controllers.AssignmentsController.GetAssignments (StudyTracker.Presentation)" in 81.9111ms
+2025-06-06 15:26:28.678 +05:00 [Information] Executed endpoint '"StudyTracker.Presentation.Controllers.AssignmentsController.GetAssignments (StudyTracker.Presentation)"'
+2025-06-06 15:26:28.679 +05:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5000""""/api/Assignments""?studentId=e6b0f402-dcdf-4a52-b52f-21922de02d27&courseId=undefined" - 400 null "application/problem+json; charset=utf-8" 131.8165ms
+2025-06-06 15:27:24.114 +05:00 [Information] Request starting "HTTP/1.1" "OPTIONS" "http"://"localhost:5000""""/api/User/authenticate""" - null null
+2025-06-06 15:27:24.118 +05:00 [Information] CORS policy execution successful.
+2025-06-06 15:27:24.120 +05:00 [Information] Request finished "HTTP/1.1" "OPTIONS" "http"://"localhost:5000""""/api/User/authenticate""" - 204 null null 5.8811ms
+2025-06-06 15:27:24.130 +05:00 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:5000""""/api/User/authenticate""" - "application/json" 79
+2025-06-06 15:27:24.134 +05:00 [Information] CORS policy execution successful.
+2025-06-06 15:27:24.136 +05:00 [Information] Executing endpoint '"StudyTracker.Presentation.Controllers.UserController.Authenticate (StudyTracker.Presentation)"'
+2025-06-06 15:27:24.140 +05:00 [Information] Route matched with "{action = \"Authenticate\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authenticate(StudyTracker.Presentation.Models.AuthModel)" on controller "StudyTracker.Presentation.Controllers.UserController" ("StudyTracker.Presentation").
+2025-06-06 15:27:24.173 +05:00 [Information] Executing action method "StudyTracker.Presentation.Controllers.UserController.Authenticate (StudyTracker.Presentation)" - Validation state: Valid
+2025-06-06 15:27:24.336 +05:00 [Information] Executed action method "StudyTracker.Presentation.Controllers.UserController.Authenticate (StudyTracker.Presentation)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 156.8476ms.
+2025-06-06 15:27:24.343 +05:00 [Information] Executing "OkObjectResult", writing value of type '"StudyTracker.Application.Models.ResponseModel`1[[StudyTracker.Domain.Models.Student, StudyTracker.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2025-06-06 15:27:24.379 +05:00 [Information] Executed action "StudyTracker.Presentation.Controllers.UserController.Authenticate (StudyTracker.Presentation)" in 237.1677ms
+2025-06-06 15:27:24.383 +05:00 [Information] Executed endpoint '"StudyTracker.Presentation.Controllers.UserController.Authenticate (StudyTracker.Presentation)"'
+2025-06-06 15:27:24.386 +05:00 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:5000""""/api/User/authenticate""" - 200 null "application/json; charset=utf-8" 255.8453ms
+2025-06-06 15:27:24.533 +05:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5000""""/api/Courses/e6b0f402-dcdf-4a52-b52f-21922de02d27""" - null null
+2025-06-06 15:27:24.543 +05:00 [Information] CORS policy execution successful.
+2025-06-06 15:27:24.545 +05:00 [Information] Executing endpoint '"StudyTracker.Presentation.Controllers.CoursesController.GetCourses (StudyTracker.Presentation)"'
+2025-06-06 15:27:24.550 +05:00 [Information] Route matched with "{action = \"GetCourses\", controller = \"Courses\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCourses(System.Guid)" on controller "StudyTracker.Presentation.Controllers.CoursesController" ("StudyTracker.Presentation").
+2025-06-06 15:27:24.554 +05:00 [Information] Executing action method "StudyTracker.Presentation.Controllers.CoursesController.GetCourses (StudyTracker.Presentation)" - Validation state: Valid
+2025-06-06 15:27:24.573 +05:00 [Information] Executed action method "StudyTracker.Presentation.Controllers.CoursesController.GetCourses (StudyTracker.Presentation)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 17.6277ms.
+2025-06-06 15:27:24.575 +05:00 [Information] Executing "OkObjectResult", writing value of type '"StudyTracker.Application.Models.ResponseModel`1[[StudyTracker.Domain.Models.Course[], StudyTracker.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2025-06-06 15:27:24.587 +05:00 [Information] Executed action "StudyTracker.Presentation.Controllers.CoursesController.GetCourses (StudyTracker.Presentation)" in 33.857ms
+2025-06-06 15:27:24.588 +05:00 [Information] Executed endpoint '"StudyTracker.Presentation.Controllers.CoursesController.GetCourses (StudyTracker.Presentation)"'
+2025-06-06 15:27:24.589 +05:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5000""""/api/Courses/e6b0f402-dcdf-4a52-b52f-21922de02d27""" - 200 null "application/json; charset=utf-8" 56.4132ms
+2025-06-06 15:27:27.448 +05:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5000""""/swagger/index.html""" - null null
+2025-06-06 15:27:27.532 +05:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5000""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 84.5061ms
+2025-06-06 15:27:27.691 +05:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5000""""/swagger/v1/swagger.json""" - null null
+2025-06-06 15:27:27.855 +05:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5000""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 164.256ms
+2025-06-06 15:27:58.052 +05:00 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:5000""""/api/User/register""" - "application/json" 58
+2025-06-06 15:27:58.060 +05:00 [Information] CORS policy execution successful.
+2025-06-06 15:27:58.061 +05:00 [Information] Executing endpoint '"StudyTracker.Presentation.Controllers.UserController.Registration (StudyTracker.Presentation)"'
+2025-06-06 15:27:58.065 +05:00 [Information] Route matched with "{action = \"Registration\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registration(StudyTracker.Presentation.Models.AuthModel)" on controller "StudyTracker.Presentation.Controllers.UserController" ("StudyTracker.Presentation").
+2025-06-06 15:27:58.068 +05:00 [Information] Executing action method "StudyTracker.Presentation.Controllers.UserController.Registration (StudyTracker.Presentation)" - Validation state: Valid
+2025-06-06 15:27:58.087 +05:00 [Information] Executed action method "StudyTracker.Presentation.Controllers.UserController.Registration (StudyTracker.Presentation)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 16.869ms.
+2025-06-06 15:27:58.088 +05:00 [Information] Executing "OkObjectResult", writing value of type '"StudyTracker.Application.Models.ResponseModel`1[[StudyTracker.Domain.Models.Student, StudyTracker.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2025-06-06 15:27:58.090 +05:00 [Information] Executed action "StudyTracker.Presentation.Controllers.UserController.Registration (StudyTracker.Presentation)" in 22.7258ms
+2025-06-06 15:27:58.091 +05:00 [Information] Executed endpoint '"StudyTracker.Presentation.Controllers.UserController.Registration (StudyTracker.Presentation)"'
+2025-06-06 15:27:58.092 +05:00 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:5000""""/api/User/register""" - 200 null "application/json; charset=utf-8" 40.5213ms
+2025-06-06 15:28:04.719 +05:00 [Information] Request starting "HTTP/1.1" "OPTIONS" "http"://"localhost:5000""""/api/Assignments""?studentId=e6b0f402-dcdf-4a52-b52f-21922de02d27&courseId=6f32c729-6147-4940-81f3-086fd12fd874" - null null
+2025-06-06 15:28:04.721 +05:00 [Information] CORS policy execution successful.
+2025-06-06 15:28:04.723 +05:00 [Information] Request finished "HTTP/1.1" "OPTIONS" "http"://"localhost:5000""""/api/Assignments""?studentId=e6b0f402-dcdf-4a52-b52f-21922de02d27&courseId=6f32c729-6147-4940-81f3-086fd12fd874" - 204 null null 3.8475ms
+2025-06-06 15:28:04.726 +05:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5000""""/api/Assignments""?studentId=e6b0f402-dcdf-4a52-b52f-21922de02d27&courseId=6f32c729-6147-4940-81f3-086fd12fd874" - "application/json" null
+2025-06-06 15:28:04.731 +05:00 [Information] CORS policy execution successful.
+2025-06-06 15:28:04.732 +05:00 [Information] Executing endpoint '"StudyTracker.Presentation.Controllers.AssignmentsController.GetAssignments (StudyTracker.Presentation)"'
+2025-06-06 15:28:04.734 +05:00 [Information] Route matched with "{action = \"GetAssignments\", controller = \"Assignments\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAssignments(System.Guid, System.Guid)" on controller "StudyTracker.Presentation.Controllers.AssignmentsController" ("StudyTracker.Presentation").
+2025-06-06 15:28:04.738 +05:00 [Information] Executing action method "StudyTracker.Presentation.Controllers.AssignmentsController.GetAssignments (StudyTracker.Presentation)" - Validation state: Valid
+2025-06-06 15:28:04.758 +05:00 [Information] Executed action method "StudyTracker.Presentation.Controllers.AssignmentsController.GetAssignments (StudyTracker.Presentation)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 18.3469ms.
+2025-06-06 15:28:04.760 +05:00 [Information] Executing "OkObjectResult", writing value of type '"StudyTracker.Application.Models.ResponseModel`1[[StudyTracker.Domain.Models.Assignments[], StudyTracker.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2025-06-06 15:28:04.779 +05:00 [Information] Executed action "StudyTracker.Presentation.Controllers.AssignmentsController.GetAssignments (StudyTracker.Presentation)" in 42.4445ms
+2025-06-06 15:28:04.781 +05:00 [Information] Executed endpoint '"StudyTracker.Presentation.Controllers.AssignmentsController.GetAssignments (StudyTracker.Presentation)"'
+2025-06-06 15:28:04.783 +05:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5000""""/api/Assignments""?studentId=e6b0f402-dcdf-4a52-b52f-21922de02d27&courseId=6f32c729-6147-4940-81f3-086fd12fd874" - "application/json" null
+2025-06-06 15:28:04.788 +05:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5000""""/api/Assignments""?studentId=e6b0f402-dcdf-4a52-b52f-21922de02d27&courseId=6f32c729-6147-4940-81f3-086fd12fd874" - 200 null "application/json; charset=utf-8" 62.1436ms
+2025-06-06 15:28:04.791 +05:00 [Information] CORS policy execution successful.
+2025-06-06 15:28:04.796 +05:00 [Information] Executing endpoint '"StudyTracker.Presentation.Controllers.AssignmentsController.GetAssignments (StudyTracker.Presentation)"'
+2025-06-06 15:28:04.798 +05:00 [Information] Route matched with "{action = \"GetAssignments\", controller = \"Assignments\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAssignments(System.Guid, System.Guid)" on controller "StudyTracker.Presentation.Controllers.AssignmentsController" ("StudyTracker.Presentation").
+2025-06-06 15:28:04.803 +05:00 [Information] Executing action method "StudyTracker.Presentation.Controllers.AssignmentsController.GetAssignments (StudyTracker.Presentation)" - Validation state: Valid
+2025-06-06 15:28:04.809 +05:00 [Information] Executed action method "StudyTracker.Presentation.Controllers.AssignmentsController.GetAssignments (StudyTracker.Presentation)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 4.5931ms.
+2025-06-06 15:28:04.812 +05:00 [Information] Executing "OkObjectResult", writing value of type '"StudyTracker.Application.Models.ResponseModel`1[[StudyTracker.Domain.Models.Assignments[], StudyTracker.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2025-06-06 15:28:04.813 +05:00 [Information] Executed action "StudyTracker.Presentation.Controllers.AssignmentsController.GetAssignments (StudyTracker.Presentation)" in 12.8591ms
+2025-06-06 15:28:04.815 +05:00 [Information] Executed endpoint '"StudyTracker.Presentation.Controllers.AssignmentsController.GetAssignments (StudyTracker.Presentation)"'
+2025-06-06 15:28:04.817 +05:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5000""""/api/Assignments""?studentId=e6b0f402-dcdf-4a52-b52f-21922de02d27&courseId=6f32c729-6147-4940-81f3-086fd12fd874" - 200 null "application/json; charset=utf-8" 34.1595ms
+2025-06-06 15:28:09.433 +05:00 [Information] Request starting "HTTP/1.1" "OPTIONS" "http"://"localhost:5000""""/api/User/byCourses""?courseId=6f32c729-6147-4940-81f3-086fd12fd874" - null null
+2025-06-06 15:28:09.436 +05:00 [Information] CORS policy execution successful.
+2025-06-06 15:28:09.438 +05:00 [Information] Request finished "HTTP/1.1" "OPTIONS" "http"://"localhost:5000""""/api/User/byCourses""?courseId=6f32c729-6147-4940-81f3-086fd12fd874" - 204 null null 4.6006ms
+2025-06-06 15:28:09.442 +05:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5000""""/api/User/byCourses""?courseId=6f32c729-6147-4940-81f3-086fd12fd874" - "application/json" null
+2025-06-06 15:28:09.445 +05:00 [Information] CORS policy execution successful.
+2025-06-06 15:28:09.446 +05:00 [Information] Executing endpoint '"StudyTracker.Presentation.Controllers.UserController.GetUsersByCourses (StudyTracker.Presentation)"'
+2025-06-06 15:28:09.451 +05:00 [Information] Route matched with "{action = \"GetUsersByCourses\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersByCourses(System.Guid)" on controller "StudyTracker.Presentation.Controllers.UserController" ("StudyTracker.Presentation").
+2025-06-06 15:28:09.455 +05:00 [Information] Executing action method "StudyTracker.Presentation.Controllers.UserController.GetUsersByCourses (StudyTracker.Presentation)" - Validation state: Valid
+2025-06-06 15:28:09.466 +05:00 [Information] Executed action method "StudyTracker.Presentation.Controllers.UserController.GetUsersByCourses (StudyTracker.Presentation)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 9.4637ms.
+2025-06-06 15:28:09.468 +05:00 [Information] Executing "OkObjectResult", writing value of type '"StudyTracker.Application.Models.ResponseModel`1[[System.Collections.Generic.List`1[[StudyTracker.Domain.Models.Student, StudyTracker.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2025-06-06 15:28:09.472 +05:00 [Information] Executed action "StudyTracker.Presentation.Controllers.UserController.GetUsersByCourses (StudyTracker.Presentation)" in 18.857ms
+2025-06-06 15:28:09.474 +05:00 [Information] Executed endpoint '"StudyTracker.Presentation.Controllers.UserController.GetUsersByCourses (StudyTracker.Presentation)"'
+2025-06-06 15:28:09.476 +05:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5000""""/api/User/byCourses""?courseId=6f32c729-6147-4940-81f3-086fd12fd874" - 200 null "application/json; charset=utf-8" 34.1605ms
+2025-06-06 15:28:11.218 +05:00 [Information] Request starting "HTTP/1.1" "OPTIONS" "http"://"localhost:5000""""/api/User""" - null null
+2025-06-06 15:28:11.221 +05:00 [Information] CORS policy execution successful.
+2025-06-06 15:28:11.222 +05:00 [Information] Request finished "HTTP/1.1" "OPTIONS" "http"://"localhost:5000""""/api/User""" - 204 null null 4.1426ms
+2025-06-06 15:28:11.226 +05:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5000""""/api/User""" - "application/json" null
+2025-06-06 15:28:11.229 +05:00 [Information] CORS policy execution successful.
+2025-06-06 15:28:11.230 +05:00 [Information] Executing endpoint '"StudyTracker.Presentation.Controllers.UserController.GetUsers (StudyTracker.Presentation)"'
+2025-06-06 15:28:11.234 +05:00 [Information] Route matched with "{action = \"GetUsers\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsers()" on controller "StudyTracker.Presentation.Controllers.UserController" ("StudyTracker.Presentation").
+2025-06-06 15:28:11.237 +05:00 [Information] Executing action method "StudyTracker.Presentation.Controllers.UserController.GetUsers (StudyTracker.Presentation)" - Validation state: Valid
+2025-06-06 15:28:11.245 +05:00 [Information] Executed action method "StudyTracker.Presentation.Controllers.UserController.GetUsers (StudyTracker.Presentation)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 7.0738ms.
+2025-06-06 15:28:11.247 +05:00 [Information] Executing "OkObjectResult", writing value of type '"StudyTracker.Application.Models.ResponseModel`1[[System.Collections.Generic.List`1[[StudyTracker.Domain.Models.Student, StudyTracker.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2025-06-06 15:28:11.249 +05:00 [Information] Executed action "StudyTracker.Presentation.Controllers.UserController.GetUsers (StudyTracker.Presentation)" in 12.7945ms
+2025-06-06 15:28:11.251 +05:00 [Information] Executed endpoint '"StudyTracker.Presentation.Controllers.UserController.GetUsers (StudyTracker.Presentation)"'
+2025-06-06 15:28:11.253 +05:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5000""""/api/User""" - 200 null "application/json; charset=utf-8" 26.5677ms
+2025-06-06 15:28:12.448 +05:00 [Information] Request starting "HTTP/1.1" "OPTIONS" "http"://"localhost:5000""""/api/Courses/Assign""?courseId=6f32c729-6147-4940-81f3-086fd12fd874&studentId=415108a9-1407-4872-9b42-3e2ce4b8b977" - null null
+2025-06-06 15:28:12.452 +05:00 [Information] CORS policy execution successful.
+2025-06-06 15:28:12.453 +05:00 [Information] Request finished "HTTP/1.1" "OPTIONS" "http"://"localhost:5000""""/api/Courses/Assign""?courseId=6f32c729-6147-4940-81f3-086fd12fd874&studentId=415108a9-1407-4872-9b42-3e2ce4b8b977" - 204 null null 4.7165ms
+2025-06-06 15:28:12.456 +05:00 [Information] Request starting "HTTP/1.1" "PUT" "http"://"localhost:5000""""/api/Courses/Assign""?courseId=6f32c729-6147-4940-81f3-086fd12fd874&studentId=415108a9-1407-4872-9b42-3e2ce4b8b977" - "application/json" 0
+2025-06-06 15:28:12.459 +05:00 [Information] CORS policy execution successful.
+2025-06-06 15:28:12.460 +05:00 [Information] Executing endpoint '"StudyTracker.Presentation.Controllers.CoursesController.AssignCourse (StudyTracker.Presentation)"'
+2025-06-06 15:28:12.464 +05:00 [Information] Route matched with "{action = \"AssignCourse\", controller = \"Courses\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AssignCourse(System.Guid, System.Guid)" on controller "StudyTracker.Presentation.Controllers.CoursesController" ("StudyTracker.Presentation").
+2025-06-06 15:28:12.467 +05:00 [Information] Executing action method "StudyTracker.Presentation.Controllers.CoursesController.AssignCourse (StudyTracker.Presentation)" - Validation state: Valid
+2025-06-06 15:28:12.492 +05:00 [Information] Executed action method "StudyTracker.Presentation.Controllers.CoursesController.AssignCourse (StudyTracker.Presentation)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 23.1618ms.
+2025-06-06 15:28:12.494 +05:00 [Information] Executing "OkObjectResult", writing value of type '"StudyTracker.Application.Models.ResponseModel`1[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2025-06-06 15:28:12.500 +05:00 [Information] Executed action "StudyTracker.Presentation.Controllers.CoursesController.AssignCourse (StudyTracker.Presentation)" in 33.2958ms
+2025-06-06 15:28:12.501 +05:00 [Information] Executed endpoint '"StudyTracker.Presentation.Controllers.CoursesController.AssignCourse (StudyTracker.Presentation)"'
+2025-06-06 15:28:12.503 +05:00 [Information] Request finished "HTTP/1.1" "PUT" "http"://"localhost:5000""""/api/Courses/Assign""?courseId=6f32c729-6147-4940-81f3-086fd12fd874&studentId=415108a9-1407-4872-9b42-3e2ce4b8b977" - 200 null "application/json; charset=utf-8" 46.4712ms
+2025-06-06 15:28:13.353 +05:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5000""""/api/User/byCourses""?courseId=6f32c729-6147-4940-81f3-086fd12fd874" - "application/json" null
+2025-06-06 15:28:13.356 +05:00 [Information] CORS policy execution successful.
+2025-06-06 15:28:13.357 +05:00 [Information] Executing endpoint '"StudyTracker.Presentation.Controllers.UserController.GetUsersByCourses (StudyTracker.Presentation)"'
+2025-06-06 15:28:13.358 +05:00 [Information] Route matched with "{action = \"GetUsersByCourses\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersByCourses(System.Guid)" on controller "StudyTracker.Presentation.Controllers.UserController" ("StudyTracker.Presentation").
+2025-06-06 15:28:13.360 +05:00 [Information] Executing action method "StudyTracker.Presentation.Controllers.UserController.GetUsersByCourses (StudyTracker.Presentation)" - Validation state: Valid
+2025-06-06 15:28:13.364 +05:00 [Information] Executed action method "StudyTracker.Presentation.Controllers.UserController.GetUsersByCourses (StudyTracker.Presentation)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 3.3842ms.
+2025-06-06 15:28:13.367 +05:00 [Information] Executing "OkObjectResult", writing value of type '"StudyTracker.Application.Models.ResponseModel`1[[System.Collections.Generic.List`1[[StudyTracker.Domain.Models.Student, StudyTracker.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2025-06-06 15:28:13.368 +05:00 [Information] Executed action "StudyTracker.Presentation.Controllers.UserController.GetUsersByCourses (StudyTracker.Presentation)" in 8.7618ms
+2025-06-06 15:28:13.370 +05:00 [Information] Executed endpoint '"StudyTracker.Presentation.Controllers.UserController.GetUsersByCourses (StudyTracker.Presentation)"'
+2025-06-06 15:28:13.372 +05:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5000""""/api/User/byCourses""?courseId=6f32c729-6147-4940-81f3-086fd12fd874" - 200 null "application/json; charset=utf-8" 18.7117ms
+2025-06-06 15:28:28.425 +05:00 [Information] Request starting "HTTP/1.1" "OPTIONS" "http"://"localhost:5000""""/api/User/byCourses""?courseId=6f32c729-6147-4940-81f3-086fd12fd874" - null null
+2025-06-06 15:28:28.428 +05:00 [Information] CORS policy execution successful.
+2025-06-06 15:28:28.429 +05:00 [Information] Request finished "HTTP/1.1" "OPTIONS" "http"://"localhost:5000""""/api/User/byCourses""?courseId=6f32c729-6147-4940-81f3-086fd12fd874" - 204 null null 4.7963ms
+2025-06-06 15:28:28.433 +05:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5000""""/api/User/byCourses""?courseId=6f32c729-6147-4940-81f3-086fd12fd874" - "application/json" null
+2025-06-06 15:28:28.436 +05:00 [Information] CORS policy execution successful.
+2025-06-06 15:28:28.437 +05:00 [Information] Executing endpoint '"StudyTracker.Presentation.Controllers.UserController.GetUsersByCourses (StudyTracker.Presentation)"'
+2025-06-06 15:28:28.438 +05:00 [Information] Route matched with "{action = \"GetUsersByCourses\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersByCourses(System.Guid)" on controller "StudyTracker.Presentation.Controllers.UserController" ("StudyTracker.Presentation").
+2025-06-06 15:28:28.440 +05:00 [Information] Executing action method "StudyTracker.Presentation.Controllers.UserController.GetUsersByCourses (StudyTracker.Presentation)" - Validation state: Valid
+2025-06-06 15:28:28.446 +05:00 [Information] Executed action method "StudyTracker.Presentation.Controllers.UserController.GetUsersByCourses (StudyTracker.Presentation)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 3.8924ms.
+2025-06-06 15:28:28.448 +05:00 [Information] Executing "OkObjectResult", writing value of type '"StudyTracker.Application.Models.ResponseModel`1[[System.Collections.Generic.List`1[[StudyTracker.Domain.Models.Student, StudyTracker.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2025-06-06 15:28:28.451 +05:00 [Information] Executed action "StudyTracker.Presentation.Controllers.UserController.GetUsersByCourses (StudyTracker.Presentation)" in 11.0316ms
+2025-06-06 15:28:28.453 +05:00 [Information] Executed endpoint '"StudyTracker.Presentation.Controllers.UserController.GetUsersByCourses (StudyTracker.Presentation)"'
+2025-06-06 15:28:28.454 +05:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5000""""/api/User/byCourses""?courseId=6f32c729-6147-4940-81f3-086fd12fd874" - 200 null "application/json; charset=utf-8" 21.508ms
+2025-06-06 16:42:06.293 +05:00 [Fatal] The Application failed to start.
+Npgsql.NpgsqlException (0x80004005): Failed to connect to [::1]:5430
+ ---> System.Net.Sockets.SocketException (10013): Сделана попытка доступа к сокету методом, запрещенным правами доступа.
+   at Npgsql.Internal.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.Internal.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|214_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.Open()
+   at FluentMigrator.Runner.Processors.GenericProcessorBase.<>c__DisplayClass6_1.<.ctor>b__1()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at FluentMigrator.Runner.Processors.GenericProcessorBase.get_Connection()
+   at FluentMigrator.Runner.Processors.GenericProcessorBase.EnsureConnectionIsOpen()
+   at FluentMigrator.Runner.Processors.Postgres.PostgresProcessor.Exists(String template, Object[] args)
+   at FluentMigrator.Runner.Processors.Postgres.PostgresProcessor.TableExists(String schemaName, String tableName)
+   at FluentMigrator.Runner.VersionLoader.get_AlreadyCreatedVersionTable()
+   at FluentMigrator.Runner.VersionLoader.LoadVersionInfo()
+   at FluentMigrator.Runner.VersionLoader..ctor(IProcessorAccessor processorAccessor, IConventionSet conventionSet, IMigrationRunnerConventions conventions, IVersionTableMetaData versionTableMetaData, IMigrationRunner runner)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithManyArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance[T](IServiceProvider provider, Object[] parameters)
+   at Microsoft.Extensions.DependencyInjection.FluentMigratorServiceCollectionExtensions.<>c.<AddFluentMigratorCore>b__0_6(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at FluentMigrator.Runner.MigrationRunner.get_VersionLoader()
+   at FluentMigrator.Runner.MigrationRunner.ListMigrations()
+   at StudyTracker.Infrastructure.Migrator.Migrations.Database.MigrationManager.MigrateDatabase(IHost host) in C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Infrastructure.Migrator\Migrations\Database\MigrationManager.cs:line 18
+   at StudyTracker.Backend.Program.Main(String[] args) in C:\Users\vovac\RiderProjects\StudyTracker.Backend\StudyTracker.Host\Program.cs:line 26

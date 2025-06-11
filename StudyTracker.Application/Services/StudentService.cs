@@ -1,5 +1,6 @@
 using System.Security.Cryptography;
 using System.Text;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using StudyTracker.Application.Contracts;
 using StudyTracker.Application.Contracts.External;
@@ -8,7 +9,7 @@ using StudyTracker.Domain.Models;
 
 namespace StudyTracker.Application.Services;
 
-public class StudentService(IStudentProvider studentProvider, IOptions<Admin> admin) : IStudentService
+public class StudentService(IStudentProvider studentProvider, IOptions<Admin> admin, ILogger<StudentService> logger) : IStudentService
 {
     public async Task<ResponseModel<Student>> Authenticate(string login, string password)
     {
@@ -102,14 +103,16 @@ public class StudentService(IStudentProvider studentProvider, IOptions<Admin> ad
         {
             var students = await studentProvider.GetUsersByCourse(courseId, CancellationToken.None);
 
-            List<Student?> newStudents = new List<Student?>();
+            List<Student?> newStudents = students.ToList()!;
 
-            if  (students.Any(s => s.StudentId == new Guid(admin.Value.AdminId)))
-            {
-                newStudents.AddRange(students);
-                newStudents.RemoveAt(newStudents.IndexOf(newStudents.FirstOrDefault(s => s.StudentId == new Guid(admin.Value.AdminId)))) ;
-            }
-
+            // if  (students.Any(s => s.StudentId == new Guid(admin.Value.AdminId)))
+            // {
+            //     newStudents.AddRange(students);
+            //     newStudents.Remove(newStudents.FirstOrDefault(s => s.StudentId == new Guid(admin.Value.AdminId)));
+            //     logger.LogInformation(newStudents.Count.ToString());
+            // }
+            
+            logger.LogInformation("Количество студентов {x}", newStudents.Count.ToString());
             if (newStudents.Count > 0)
             {
                 return new ResponseModel<List<Student?>>(newStudents,

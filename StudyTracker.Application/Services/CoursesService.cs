@@ -17,6 +17,7 @@ public class CoursesService(
             Course[] courses;
             if (studentId == new Guid(admin.Value.AdminId))
             {
+                
                 courses = await coursesProvider.GetCourses(CancellationToken.None);
             }
             else
@@ -73,13 +74,14 @@ public class CoursesService(
     {
         try
         {
-            
+                
                 var student = await coursesProvider.AssignCourse(studentId, courseId, CancellationToken.None);
                 
                 return new ResponseModel<Guid>(student, true, null);
         }
         catch (Exception ex)
         {
+            Console.WriteLine(ex.Message);
             return new ResponseModel<Guid>(new Guid(),
                 false,
                 new ActionErrorModel(400, "Непредвиденная ошибка " + ex.Message));

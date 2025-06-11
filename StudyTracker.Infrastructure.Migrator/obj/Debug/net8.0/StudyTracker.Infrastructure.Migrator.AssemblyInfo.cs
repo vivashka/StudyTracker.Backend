@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StudyTracker.Infrastructure.Migrator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c127f3c08eff29648eb8bde462817f18aa73284d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80c3ab5676a35907a7ef1c438ed1c102d719ea2f")]
 [assembly: System.Reflection.AssemblyProductAttribute("StudyTracker.Infrastructure.Migrator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StudyTracker.Infrastructure.Migrator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

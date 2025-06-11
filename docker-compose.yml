@@ -1,5 +1,4 @@
-﻿version: '3.8'
-services:
+﻿services:
   studytracker.backend:
     image: studytracker.backend
     build:

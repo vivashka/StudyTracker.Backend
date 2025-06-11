@@ -8,8 +8,8 @@ public class CreateAssignmentsTable : Migration {
     {
         Execute.Sql("""
                     CREATE TABLE "Assignments" ("AssignmentId" UUID PRIMARY KEY,
-                    "Name" text NOT NULL UNIQUE,
-                    "Description" text NOT NULL,
+                    "Name" text UNIQUE,
+                    "Description" text,
                     "CourseId" uuid NOT NULL,
                     "Deadline" timestamp,
                     CONSTRAINT fk_Courses_Task FOREIGN KEY ("CourseId") REFERENCES "Courses" ("CourseId") ON DELETE CASCADE);

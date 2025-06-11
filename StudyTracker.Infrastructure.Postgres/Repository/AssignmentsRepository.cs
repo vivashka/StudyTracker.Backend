@@ -19,8 +19,8 @@ public class AssignmentsRepository : BaseRepository, IAssignmentsRepository
                              a."Deadline"
                          FROM "Assignments" a
                          JOIN "Courses" c ON a."CourseId" = c."CourseId"
-                         JOIN "StudentsCourses" sc ON c."CourseId" = sc."CourseId" AND sc."StudentId" = @StudentId
-                         LEFT JOIN "AssignmentsStates" ast ON a."AssignmentId" = ast."AssignmentId" AND ast."StudentId" = @StudentId;
+                         LEFT JOIN "AssignmentsStates" ast ON a."AssignmentId" = ast."AssignmentId" AND ast."StudentId" = @StudentId
+                         WHERE a."CourseId" = @CourseId;
                          """;
         
         var param = new DynamicParameters();
